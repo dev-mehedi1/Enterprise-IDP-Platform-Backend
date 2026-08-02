@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "enterprise-idp-platform"
+version = "0.1.0"
+description = "Enterprise Intelligent Document Processing (IDP) Platform Backend"
+authors = ["AI Architect <architect@example.com>"]
+readme = "README.md"
+packages = [{include = "app"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.111.0"
+uvicorn = {extras = ["standard"], version = "^0.30.1"}
+pydantic = {extras = ["email"], version = "^2.7.4"}
+pydantic-settings = "^2.3.4"
+motor = "^3.5.0"
+beanie = "^1.26.0"
+celery = "^5.4.0"
+redis = "^5.0.7"
+pika = "^1.3.2"
+pymupdf = "^1.24.5"
+pdfplumber = "^0.11.2"
+pdfminer-six = "^20231228"
+camelot-py = {extras = ["cv"], version = "^0.11.0"}
+opencv-python-headless = "^4.10.0.84"
+pillow = "^10.3.0"
+pytesseract = "^0.3.10"
+rapidfuzz = "^3.9.3"
+structlog = "^24.2.0"
+prometheus-fastapi-instrumentator = "^7.0.0"
+python-multipart = "^0.0.9"
+pyjwt = "^2.8.0"
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+huggingface-hub = "^0.23.4"
+sentence-transformers = "^3.0.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+pytest-asyncio = "^0.23.7"
+black = "^24.4.2"
+isort = "^5.13.2"
+mypy = "^1.10.0"
+flake8 = "^7.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
